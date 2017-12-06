@@ -7,10 +7,14 @@
 
 feature "Enter players' names" do
   scenario "Enter names" do
-	visit '/'
-	fill_in("p1", with: "Jimmy")
-  fill_in("p2", with: "Lemonade")
-	click_button("Submit")
-	expect(page).to have_content "Jimmy vs Lemonade..."
+	  sign_in_and_play
+	  expect(page).to have_content "Jimmy vs Lemonade..."
+  end
+end
+
+feature "Show HP" do
+  scenario "Look for HP on battle page" do
+    sign_in_and_play
+    expect(page).to have_content "Lemonade HP:100/100"
   end
 end
