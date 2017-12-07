@@ -1,2 +1,8 @@
 <%= "#{@p1} vs #{@p2}..." %>
 <p><%= @p2 %> HP:100/100</p>
+<form>
+<input type = "submit", value = "Attack!" name = "attack">
+</form>
+<% if @attack %>
+<%= "#{@p1} attacked #{@p2}!" %>
+<% end %>
