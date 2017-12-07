@@ -1,8 +1,15 @@
-<%= "#{@p1_name} vs #{@p2_name}..." %>
-<p><%= @p2_name %> HP:<%= @p2health %>/100</p>
+<%= $game.title_string %>
+
+<p><%= $game.health_string(1) %></p>
+<p><%= $game.health_string(2) %></p>
+
+<p><br><br><%= $game.whose_turn_string %><br><br></p>
+
 <form>
-<input type = "submit", value = "Attack!" name = "attack">
+<input type = "submit", value = "Attack Player 1!" name = "attack">
+<input type = "submit", value = "Attack Player 2!" name = "attack">
 </form>
+
 <% if @attack %>
-<%= "#{@p1_name} attacked #{@p2_name}!" %>
+<%= $game.attack_string %>
 <% end %>

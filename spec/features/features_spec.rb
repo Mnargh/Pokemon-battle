@@ -1,8 +1,8 @@
-# feature "Test Infrastructure"  do 
+# feature "Test Infrastructure"  do
 #   scenario "Go to homepage" do
 #   	visit '/'
 #   	expect(page).to have_content "Test Infrastructure Working!!!"
-#   end	
+#   end
 # end
 
 feature "Enter players' names" do
@@ -15,19 +15,36 @@ end
 feature "Show HP" do
   scenario "Look for HP on battle page" do
     sign_in_and_play
-    expect(page).to have_content "Lemonade HP:100/100"
+    expect(page).to have_content "Lemonade HP: 100/100"
+  end
+end
+
+feature "Shows whose turn it is" do
+  scenario "It's Jimmy's turn!" do
+    sign_in_and_play
+    expect(page).to have_content "It's Jimmy's turn!"
+  end
+  scenario "It's Lemonade's turn!" do
+    sign_in_and_play
+    click_button("Attack Player 2!")
+    expect(page).to have_content "It's Lemonade's turn!"
   end
 end
 
 feature "attacks" do
   scenario "player1 attacks player2" do
     sign_in_and_play
-    click_button("Attack!")
+    click_button("Attack Player 2!")
     expect(page).to have_content "Jimmy attacked Lemonade!"
   end
-  scenario "attack takes hp from victim" do
+  scenario "Attacking Player 2 takes hp from victim" do
     sign_in_and_play
-    click_button("Attack!")
-    expect(page).to have_content "Lemonade HP:90/100"
+    click_button("Attack Player 2!")
+    expect(page).to have_content "Lemonade HP: 90/100"
+  end
+  scenario "Attacking Player 1 takes hp from victim" do
+    sign_in_and_play
+    click_button("Attack Player 1!")
+    expect(page).to have_content "Jimmy HP: 90/100"
   end
 end
