@@ -48,3 +48,11 @@ feature "attacks" do
     expect(page).to have_content "Jimmy HP: 90/100"
   end
 end
+
+feature "Winning and Losing" do
+  scenario "everyone attacks Jimmy!!(poor lad)" do
+    sign_in_and_play
+    10.times { click_button("Attack Player 1!")}
+    expect(page).to have_content "Jimmy Loses!"
+  end
+end

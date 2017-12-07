@@ -51,5 +51,13 @@ describe Game do
       expect(subject.whose_turn_string).to eq "It's Player name's turn!"
     end
   end
-
+  describe "#loser" do
+  	it "returns nil if all players are alive" do
+  		expect(subject.loser).to eq nil
+  	end
+  	it "returns a winner if a player is dead" do
+  	  allow(player).to receive(:health).and_return(0)
+  	  expect(subject.loser).to eq player
+  	end
+  end 
 end

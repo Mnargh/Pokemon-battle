@@ -15,8 +15,6 @@ class Battle < Sinatra::Base
   end
 
   get '/battle' do
-	@p1_name = $game.player(1).name
-	@p2_name = $game.player(2).name
 	@attack = params[:attack]
  	#$game.attack($game.player1, $game.player2) if @attack
  	case @attack
@@ -24,11 +22,16 @@ class Battle < Sinatra::Base
       $game.fight($game.player(1))
     when "Attack Player 2!"
       $game.fight($game.player(2))
-  end
-	@p1health = $game.player(1).health
-  @p2health = $game.player(2).health
+  	end
+  	redirect "/lose?loser=#{$game.loser.name}" if $game.loser
+
   	erb :battle
   end
+
+  get '/lose' do
+  	"#{params[:loser]} Loses!"
+  end
+
 
 run!  if app_file == $0
 end

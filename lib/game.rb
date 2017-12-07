@@ -28,6 +28,10 @@ class Game
     victim.hurt(belligerent.attack)
   end
 
+  def loser
+  	@players.select {|player| player.health <=0}.first
+  end
+
   def whose_turn_string
     "It's #{player(turn).name}'s turn!"
   end
