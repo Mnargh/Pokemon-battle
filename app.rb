@@ -17,6 +17,8 @@ class Battle < Sinatra::Base
 	@p1 = $player1.name
 	@p2 = $player2.name
 	@attack = params[:attack]
+	$player2.hurt(10) if @attack
+	@p2health = $player2.health
   	erb :battle
   end
   
