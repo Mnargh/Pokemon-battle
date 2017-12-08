@@ -31,7 +31,6 @@ describe Game do
     end
 
     it "Goes to next player's turn after attacking" do
-
       subject.fight(player)
       expect(subject.turn).to eq 2
     end
@@ -59,5 +58,5 @@ describe Game do
   	  allow(player).to receive(:health).and_return(0)
   	  expect(subject.loser).to eq player
   	end
-  end 
+  end
 end

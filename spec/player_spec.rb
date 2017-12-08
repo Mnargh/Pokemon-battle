@@ -5,17 +5,17 @@ describe Player do
   let(:victim) {described_class.new("Trump")}
 
   describe "#name" do
-  	it "returns the name" do
+  	it "Returns the name" do
   	  expect(subject.name).to eq "Nedbles"
   	end
   end
   describe "#health" do
-  	it "returns the health" do
+  	it "Returns the health" do
   	  expect(subject.health).to eq 100
   	end
   end
   describe "#hurt" do
-  	it "reduces the health by a value" do
+  	it "Reduces the health by a value" do
   		expect{subject.hurt(10)}.to change{subject.health}.by(-10)
   	end
   end

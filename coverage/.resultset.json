@@ -124,13 +124,7 @@
         null
       ],
       "/Users/tom/makersacademy/projects/week3/Battle/spec/features/features_spec.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
+        1,
         1,
         1,
         1,
@@ -181,6 +175,7 @@
         11,
         1,
         null,
+        null,
         null
       ],
       "/Users/tom/makersacademy/projects/week3/Battle/spec/game_spec.rb": [
@@ -217,7 +212,6 @@
         null,
         null,
         1,
-        null,
         1,
         1,
         null,
@@ -278,6 +272,6 @@
         null
       ]
     },
-    "timestamp": 1512667493
+    "timestamp": 1512736529
   }
 }
