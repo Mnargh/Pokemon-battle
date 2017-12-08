@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/tim/Documents/Projects/MakersAcademy/Battle/app.rb": [
+      "/Users/tom/makersacademy/projects/week3/Battle/app.rb": [
         1,
         1,
         null,
@@ -19,6 +19,7 @@
         null,
         null,
         1,
+        22,
         22,
         null,
         22,
@@ -28,7 +29,6 @@
         3,
         null,
         22,
-        null,
         21,
         null,
         null,
@@ -40,11 +40,19 @@
         1,
         null
       ],
-      "/Users/tim/Documents/Projects/MakersAcademy/Battle/lib/game.rb": [
+      "/Users/tom/makersacademy/projects/week3/Battle/lib/game.rb": [
         1,
         null,
         1,
         1,
+        null,
+        1,
+        8,
+        null,
+        null,
+        1,
+        22,
+        null,
         null,
         1,
         null,
@@ -92,7 +100,7 @@
         null,
         null
       ],
-      "/Users/tim/Documents/Projects/MakersAcademy/Battle/lib/player.rb": [
+      "/Users/tom/makersacademy/projects/week3/Battle/lib/player.rb": [
         1,
         1,
         1,
@@ -107,7 +115,7 @@
         null,
         null
       ],
-      "/Users/tim/Documents/Projects/MakersAcademy/Battle/spec/features/web_helpers.rb": [
+      "/Users/tom/makersacademy/projects/week3/Battle/spec/features/web_helpers.rb": [
         1,
         8,
         8,
@@ -115,7 +123,7 @@
         8,
         null
       ],
-      "/Users/tim/Documents/Projects/MakersAcademy/Battle/spec/features/features_spec.rb": [
+      "/Users/tom/makersacademy/projects/week3/Battle/spec/features/features_spec.rb": [
         null,
         null,
         null,
@@ -175,7 +183,7 @@
         null,
         null
       ],
-      "/Users/tim/Documents/Projects/MakersAcademy/Battle/spec/game_spec.rb": [
+      "/Users/tom/makersacademy/projects/week3/Battle/spec/game_spec.rb": [
         1,
         null,
         1,
@@ -240,7 +248,7 @@
         null,
         null
       ],
-      "/Users/tim/Documents/Projects/MakersAcademy/Battle/spec/player_spec.rb": [
+      "/Users/tom/makersacademy/projects/week3/Battle/spec/player_spec.rb": [
         1,
         null,
         1,
@@ -270,6 +278,6 @@
         null
       ]
     },
-    "timestamp": 1512664974
+    "timestamp": 1512667493
   }
 }

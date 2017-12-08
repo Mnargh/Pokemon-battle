@@ -10,22 +10,22 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-  	$game = Game.new(params[:p1], params[:p2])
+  	@game = Game.create_new_game(params[:p1], params[:p2])
   	redirect '/battle'
   end
 
   get '/battle' do
-	@attack = params[:attack]
- 	#$game.attack($game.player1, $game.player2) if @attack
- 	case @attack
-    when "Attack Player 1!"
-      $game.fight($game.player(1))
-    when "Attack Player 2!"
-      $game.fight($game.player(2))
-  	end
-  	redirect "/lose?loser=#{$game.loser.name}" if $game.loser
-
-  	erb :battle
+    @game = Game.instance_of_game
+  	@attack = params[:attack]
+   	#$game.attack($game.player1, $game.player2) if @attack
+   	case @attack
+      when "Attack Player 1!"
+        @game.fight(@game.player(1))
+      when "Attack Player 2!"
+        @game.fight(@game.player(2))
+    	end
+    redirect "/lose?loser=#{@game.loser.name}" if @game.loser
+    erb :battle
   end
 
   get '/lose' do

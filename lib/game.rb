@@ -3,6 +3,14 @@ require './lib/player'
 class Game
   attr_reader :turn
 
+  def self.create_new_game(player_1, player_2)
+    @game = Game.new(player_1, player_2)
+  end
+  
+  def self.instance_of_game
+    @game
+  end
+
   def initialize(p1,p2, player_class = Player)
     # for future could use *players to pass in multiple players
     @players = [player_class.new(p1), player_class.new(p2)]
