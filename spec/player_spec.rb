@@ -20,8 +20,20 @@ describe Player do
   	end
   end
   describe "#attack" do
-    it "Returns the attack value" do
+
+    it "Returns a random attack value with 10hp damage" do
       expect(subject.attack).to eq(10)
     end
+    # it "Returns a random attack value minimum 8hp damage" do
+    #   srand(1)
+    #   expect(subject.attack).to eq(8)
+    # end
+    # it "Returns a random attack value maximum 12hp damage" do
+    #   srand(2)
+    #   expect(subject.attack).to eq(12)
+    # end
+
   end
+
+
 end

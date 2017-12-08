@@ -6,7 +6,7 @@ class Game
   def self.create_new_game(player_1, player_2)
     @game = Game.new(player_1, player_2)
   end
-  
+
   def self.instance_of_game
     @game
   end

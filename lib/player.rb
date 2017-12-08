@@ -4,6 +4,7 @@ class Player
   	@name = name
   	@health = 100
     @attack = 10
+    # rand(8..12)
   end
 
   def hurt(value)
